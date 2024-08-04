@@ -1,163 +1,195 @@
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e2e180, #dcdcdc);
     margin: 0;
     padding: 0;
-    background-color: #2b2b2b;
-    color: #f5f5f5;
 }
 
-header {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px;
+.invitation-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 2em;
+    border: 1px solid #b8b8b8;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.invitation-header {
     text-align: center;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #dcdcdc;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
-nav {
+.invitation-header h1 {
+    margin: 0;
+    color: #d4af37; /* Color dorado */
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+}
+
+.invitation-content {
+    text-align: center;
+    padding: 1em;
+    font-family: 'Josefin Slab', serif;
+}
+
+.invitation-content h2 {
+    margin: 0;
+    color: #333333;
+    font-size: 1.5em;
+    font-family: 'Great Vibes', cursive;
+}
+
+.invitation-content p {
+    line-height: 1.6;
+    color: #666666;
+}
+
+.when-where {
     display: flex;
-    justify-content: center;
-    background-color: #333;
-}
-
-nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-nav a:hover {
-    background-color: #555;
-}
-
-.hero {
-    background-image: url('fondo-familia-mascota.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 50px;
-}
-
-.hero p {
-    font-size: 24px;
-}
-
-.hero button {
-    padding: 10px 20px;
-    font-size: 20px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    color: #1a1a1a;
-    background-color: #ff5733;
-    transition: background-color 0.3s;
-}
-
-.hero button:hover {
-    background-color: #c70039;
-}
-
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.gallery div {
-    background-color: #3a3a3a;
-    padding: 20px;
+    justify-content: space-between;
+    margin: 2em 0;
+    padding: 1em;
+    border: 1px solid #dcdcdc;
     border-radius: 10px;
-    max-width: 300px;
-    text-align: left;
+    background-color: #f9f9f9;
+    font-family: 'Lifesavers', cursive;
 }
 
-.gallery img {
+.when, .where {
+    width: 48%;
+}
+
+.when h2, .where h2 {
+    margin-top: 0;
+    color: #333333;
+    font-size: 1.3em;
+    font-family: 'Great Vibes', cursive;
+}
+
+.when p, .where p {
+    margin: 0.5em 0;
+}
+
+.invitation-carousel {
+    text-align: center;
+    padding: 1em;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    position: relative;
     width: 100%;
-    border-radius: 10px;
-    height: auto;
+    overflow: hidden;
 }
 
-.testimonials {
+.carousel-images {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
-
-.testimonials blockquote {
-    font-size: 18px;
-    font-style: italic;
-    background-color: #3a3a3a;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-}
-
-footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px;
+.favorite-people {
     text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+    background: #fff5e6; /* Fondo suave para destacar la sección */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Josefin Slab', serif;
 }
 
-footer nav {
-    margin-bottom: 20px;
+.favorite-people h2 {
+    color: #d4af37; /* Manteniendo el color dorado */
+    font-size: 1.8em;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 0.5em;
 }
 
-footer nav a {
-    color: #ff5733;
-    text-decoration: none;
-    margin: 0 10px;
+.favorite-people p {
+    color: #666666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+.asistencia p{
+    color: #d4af37; /* Manteniendo el color dorado */
+    font-size: 1.8em;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 0.5em;
+
+
+}
+.carousel-images img {
+    width: 100%;
+    flex: 1 0 100%;
 }
 
-footer nav a:hover {
-    text-decoration: underline;
+.invitation-footer {
+    text-align: center;
+    padding-top: 1em;
+    border-top: 2px solid #dcdcdc;
+    font-family: 'Josefin Slab', serif;
 }
 
-footer div a {
-    color: #ff5733;
-    text-decoration: none;
-    margin: 0 10px;
+.invitation-footer p {
+    margin: 0;
+    color: #333333;
 }
 
-footer div a:hover {
-    text-decoration: underline;
+/* Consultas de medios para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .invitation-header h1 {
+        font-size: 2em;
+    }
+
+    .invitation-content h2 {
+        font-size: 1.3em;
+    }
+
+    .when-where {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .when, .where {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .details {
+        font-size: 0.9em;
+    }
 }
 
-footer input[type="email"] {
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-}
+@media only screen and (max-width: 480px) {
+    .invitation-container {
+        width: 95%;
+        padding: 1em;
+    }
 
-footer button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff5733;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+    .invitation-header h1 {
+        font-size: 1.5em;
+    }
 
-footer button:hover {
-    background-color: #c70039;
+    .invitation-content h2 {
+        font-size: 1.2em;
+    }
+
+    .when-where {
+        flex-direction: column;
+    }
+
+    .when, .where {
+        width: 100%;
+    }
+
+    .details {
+        font-size: 0.8em;
+    }
 }
